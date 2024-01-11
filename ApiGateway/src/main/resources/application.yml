@@ -1,0 +1,22 @@
+server:
+  port: 9003
+  
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: MicroSubject
+        uri: lb://MicroSubject
+        predicates:
+        - Path=/subject/**
+      - id: microservice-user
+        uri: lb://microservice-user
+        predicates:
+        - Path=/user/**
+
+
+  
+
+  

@@ -1,0 +1,23 @@
+server:
+  port: 9001
+  
+  
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microserviceuser
+    username: root
+    password: manek24#@tech
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  application:
+    name: microservice-user
+    
+    
+eureka:
+  instance:
+    hostname: localhost    
+  
+    
